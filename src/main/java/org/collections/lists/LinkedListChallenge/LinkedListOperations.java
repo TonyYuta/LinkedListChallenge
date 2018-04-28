@@ -59,6 +59,9 @@ public class LinkedListOperations {
 	
     // Adding elements to the linked list
 	ll.add("A");
+	ll.add("B");
+	// result
+	System.out.println("LinkedList ll After adding 2 elements: " + ll);
 	
 	}
 	
