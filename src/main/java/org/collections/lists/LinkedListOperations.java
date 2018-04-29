@@ -62,10 +62,20 @@ public class LinkedListOperations {
 	ll.add("B");
 	ll.addLast("C");
 	ll.addFirst("D");
-	// result
-	System.out.println("LinkedList ll After adding 2 elements: " + ll);
+	// result [D, A, B, C]
+	System.out.println("LinkedList ll after add 4 elements: " + ll);
 	
-	// 
+	// removing elements
+	ll.remove("A");
+	// result [D, B, C]
+	System.out.println("LinkedList ll after remove 1 element: " + ll);
+
+	ll.removeFirst();
+	ll.removeLast();
+	// result [B]
+	System.out.println("LinkedList ll after remove first & last elements: " + ll);
+	
+	
 	}
 	
 	
