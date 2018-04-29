@@ -6,7 +6,7 @@
  *   
  */
 
-package org.collections.lists.LinkedListChallenge;
+package org.collections.lists;
 
 import java.util.LinkedList;
 

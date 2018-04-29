@@ -6,12 +6,13 @@
  *   
  */
 
-package org.collections.lists.LinkedListChallenge;
+package org.collections.lists;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -28,13 +29,13 @@ import org.testng.annotations.Test;
  */
 public class LinkedListOperationsTest {
 	
-	//LinkedListOperations llo;
 	LinkedListOperations llo = new LinkedListOperations();
 
+	//@Parameters({ "browser", "appURL", "groups" })
+	@Parameters({"groups"})
 	@BeforeClass(alwaysRun = true) 
-	//LinkedListOperations llo = new LinkedListOperations();
-	public void setUpBeforeClassLinkedListOperationsTest() {
-		
+	public void setUpBeforeClassLinkedListOperationsTest(String groups) {
+		groups="all";
 	}
 	
 	@BeforeMethod(alwaysRun = true)
