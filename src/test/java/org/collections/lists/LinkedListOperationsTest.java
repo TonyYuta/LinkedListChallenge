@@ -8,6 +8,9 @@
 
 package org.collections.lists;
 
+import java.util.LinkedList;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -30,11 +33,13 @@ import org.testng.annotations.Test;
 public class LinkedListOperationsTest {
 	
 	LinkedListOperations llo = new LinkedListOperations();
+	LinkedList<String> ll;
 
 	//@Parameters({ "browser", "appURL", "groups" })
 	@Parameters({"groups"})
 	@BeforeClass(alwaysRun = true) 
 	public void setUpBeforeClassLinkedListOperationsTest(String groups) {
+		ll = new LinkedList<>();
 		groups="all";
 	}
 	
@@ -55,7 +60,8 @@ public class LinkedListOperationsTest {
 	
 	@Test(enabled = true, groups = {"bat", "LinkedList", "List", "all"}, priority = 0)
 	public void test001_basicsLinkedList() {
-		llo.basicsLinkedList();
+		llo.basicsLinkedList(ll);
+		Assert.assertEquals(llo.basicsLinkedList(ll).toString(), "[L, B, M, N, K]", "Result doesn't match to expected [L, B, M, N, K]");
 		
 	}
 	
