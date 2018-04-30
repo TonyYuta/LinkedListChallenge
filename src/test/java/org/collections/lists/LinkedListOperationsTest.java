@@ -73,4 +73,10 @@ public class LinkedListOperationsTest {
 		Assert.assertEquals(llo.linkedListSize(5), 5, "Result doesn't match to expected size of [D0, D1, D2, D3, D4");		
 	}
 	
+	@Test(enabled = true, groups = {"findNthElement", "LinkedList", "List", "all"}, priority = 0)
+	public void test003_basicsLinkedList() {
+		Assert.assertEquals(llo.findNthElement(11, 1), "el_1", "Result doesn't match to expected el_1");		
+	}
+	
+	
 }

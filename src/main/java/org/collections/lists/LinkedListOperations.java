@@ -88,6 +88,15 @@ public class LinkedListOperations {
 		return ll.size();
 		}
 	
-	
+	public String findNthElement(int listSize, int nth) {
+		LinkedList<String> ll = new LinkedList<>();
+		// Adding qtyElements elements to the linked list
+		for(int i = 0; i < listSize; i++)
+			ll.add("el_" + i);
+		// print out ll
+		System.out.println("LinkedList ll after add listSize elements: " + ll);
+		
+		return ll.get(nth);
+	}
 	
 }
