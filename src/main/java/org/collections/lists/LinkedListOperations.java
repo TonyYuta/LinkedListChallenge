@@ -42,7 +42,7 @@ public class LinkedListOperations {
 		llo.basicsLinkedList(ll);
 	}
 	
-	public LinkedList<String> basicsLinkedList(LinkedList<String> ll) {
+	public LinkedList<String> basicsLinkedList(final LinkedList<String> ll) {
 	
     // Creating object of class linked list
 	//LinkedList<String> ll = new LinkedList<>()
