@@ -5,6 +5,8 @@
 <!--  <parameter name="browser" value="chrome"/>-->
 <!-- <parameter name="groups" value="all"/> -->
   <test name="basicTest">
+    <parameter name = "groups" value="all"/>
+    
     <classes> 
       <class name="org.collections.lists.LinkedListOperationsTest"/> 
       

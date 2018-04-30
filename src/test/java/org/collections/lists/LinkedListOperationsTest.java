@@ -15,6 +15,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -33,13 +34,13 @@ import org.testng.annotations.Test;
 public class LinkedListOperationsTest {
 	
 	LinkedListOperations llo = new LinkedListOperations();
-	LinkedList<String> ll;
+	LinkedList<String> l;
 
 	//@Parameters({ "browser", "appURL", "groups" })
 	@Parameters({"groups"})
 	@BeforeClass(alwaysRun = true) 
-	public void setUpBeforeClassLinkedListOperationsTest(String groups) {
-		ll = new LinkedList<>();
+	public void setUpBeforeClassLinkedListOperationsTest(@Optional("all") String groups) {
+		//ll = new LinkedList<>();
 		groups="all";
 	}
 	
@@ -60,9 +61,16 @@ public class LinkedListOperationsTest {
 	
 	@Test(enabled = true, groups = {"bat", "LinkedList", "List", "all"}, priority = 0)
 	public void test001_basicsLinkedList() {
-		llo.basicsLinkedList(ll);
-		Assert.assertEquals(llo.basicsLinkedList(ll).toString(), "[L, B, M, N, K]", "Result doesn't match to expected [L, B, M, N, K]");
-		
+		l = new LinkedList<>();
+		llo.basicsLinkedList(l);
+		Assert.assertEquals(llo.basicsLinkedList(l).toString(), "[L, B, M, N, K]", "Result doesn't match to expected [L, B, M, N, K]");		
+	}
+	
+	@Test(enabled = true, groups = {"LinkedListSize", "LinkedList", "List", "all"}, priority = 0)
+	public void test002_basicsLinkedList() {
+		l = new LinkedList<>();
+		llo.linkedListSize(5);
+		Assert.assertEquals(llo.linkedListSize(5), 5, "Result doesn't match to expected size of [D0, D1, D2, D3, D4");		
 	}
 	
 }

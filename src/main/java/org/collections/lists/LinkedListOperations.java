@@ -37,8 +37,9 @@ public class LinkedListOperations {
 		
 	public static void main(String[] args) {
 		 
-		//LinkedListOperations llo = new LinkedListOperations();
-		//llo.basicsLinkedList();
+		LinkedListOperations llo = new LinkedListOperations();
+		LinkedList<String> ll = new LinkedList<>();
+		llo.basicsLinkedList(ll);
 	}
 	
 	public LinkedList<String> basicsLinkedList(LinkedList<String> ll) {
@@ -74,6 +75,18 @@ public class LinkedListOperations {
 	
 		return ll;
 	}
+	
+	public int linkedListSize(int qtyElements) {
+		
+		LinkedList<String> ll = new LinkedList<>();
+		
+	    // Adding qtyElements elements to the linked list
+		for(int i = 0; i < qtyElements; i++)
+			ll.add("D" + i);
+		System.out.println("LinkedList ll after add qtyElements elements: " + ll);
+				
+		return ll.size();
+		}
 	
 	
 	
